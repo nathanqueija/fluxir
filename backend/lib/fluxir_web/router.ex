@@ -7,5 +7,8 @@ defmodule FluxirWeb.Router do
 
   scope "/api", FluxirWeb do
     pipe_through :api
+
+    get "/hello/:name", HelloController, :world
+    # get "/", PageController, :index
   end
 end
